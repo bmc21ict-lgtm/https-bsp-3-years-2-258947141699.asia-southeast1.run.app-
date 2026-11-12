@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSP 3-Years - School Strategic Budget Plan</title>
+    <meta name="description" content="ប្រព័ន្ធគ្រប់គ្រង និងតាមដានផែនការយុទ្ធសាស្ត្រថវិការយៈពេល ៣ ឆ្នាំ (BSP) និងសូចនាករគោលដៅសមិទ្ធកម្មសាលារៀន ក្រសួងអប់រំ យុវជន និងកីឡា (MoEYS)" />
+    <meta property="og:title" content="BSP 3-Years - School Strategic Budget Plan" />
+    <meta property="og:description" content="ប្រព័ន្ធគ្រប់គ្រង និងតាមដានផែនការយុទ្ធសាស្ត្រថវិការយៈពេល ៣ ឆ្នាំ (BSP) និងសូចនាករគោលដៅសមិទ្ធកម្មសាលារៀន ក្រសួងអប់រំ យុវជន និងកីឡា (MoEYS)" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Moul&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      // AI Studio Environment: HMR is disabled in preview iframes.
+      // Prevent @vite/client WebSocket connection errors and unhandled rejections.
+      (function() {
+        if (typeof window !== 'undefined') {
+          // 1. Intercept WebSocket calls for Vite HMR
+          if (typeof window.WebSocket !== 'undefined') {
+            var NativeWS = window.WebSocket;
+            window.WebSocket = function(url, protocols) {
+              var urlStr = String(url || '');
+              if (
+                urlStr.indexOf('vite') !== -1 ||
+                urlStr.indexOf('24678') !== -1 ||
+                urlStr.indexOf('ais-dev') !== -1 ||
+                urlStr.indexOf('run.app') !== -1
+              ) {
+                var fakeSocket = new EventTarget();
+                fakeSocket.readyState = 1; // OPEN
+                fakeSocket.OPEN = 1;
+                fakeSocket.CONNECTING = 0;
+                fakeSocket.CLOSING = 2;
+                fakeSocket.CLOSED = 3;
+                fakeSocket.send = function() {};
+                fakeSocket.close = function() {};
+                setTimeout(function() {
+                  try {
+                    fakeSocket.dispatchEvent(new Event('open'));
+                  } catch (e) {}
+                }, 0);
+                return fakeSocket;
+              }
+              return new NativeWS(url, protocols);
+            };
+            window.WebSocket.prototype = NativeWS.prototype;
+            window.WebSocket.CONNECTING = 0;
+            window.WebSocket.OPEN = 1;
+            window.WebSocket.CLOSING = 2;
+            window.WebSocket.CLOSED = 3;
+          }
+
+          // 2. Capture-phase handlers to silence any residual WebSocket/@vite/client errors
+          function isIgnored(err, event) {
+            var str = '';
+            try {
+              str = [
+                err && err.message,
+                err && err.stack,
+                event && event.message,
+                event && event.filename,
+                String(err || ''),
+                String(event || '')
+              ].join(' ');
+            } catch (e) {
+              str = String(err || '');
+            }
+            return (
+              str.indexOf('WebSocket') !== -1 ||
+              str.indexOf('ws:') !== -1 ||
+              str.indexOf('wss:') !== -1 ||
+              str.indexOf('@vite/client') !== -1 ||
+              str.indexOf('vite') !== -1 ||
+              str.indexOf('closed without opened') !== -1
+            );
+          }
+
+          window.addEventListener('unhandledrejection', function(event) {
+            if (isIgnored(event.reason, event)) {
+              event.preventDefault();
+              event.stopPropagation();
+              event.stopImmediatePropagation();
+              return false;
+            }
+          }, true);
+
+          window.addEventListener('error', function(event) {
+            if (isIgnored(event.error, event)) {
+              event.preventDefault();
+              event.stopPropagation();
+              event.stopImmediatePropagation();
+              return false;
+            }
+          }, true);
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
